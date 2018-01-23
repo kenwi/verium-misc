@@ -7,7 +7,7 @@ sudo apt install automake autoconf pkg-config libcurl4-openssl-dev libjansson-de
 
 cd veriumMiner
 ./build.sh
-echo "./cpuminer -n 1048576 -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u WfqGj6Cp2lW8tabDCT_2.$(hostname) -p p2lW8tabDCTXf $@" > run.sh
+echo "./cpuminer -n 1048576 -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u user.$(hostname) -p pasword $@" > run.sh
 chmod +x run.sh
 
 echo "Execute run.sh to start the miner. Additional parameters will be passed through to the cpuminer executable."
