@@ -11,7 +11,8 @@ git clone https://github.com/fireworm71/veriumMiner
 sudo apt install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev -y
 
 # Build and output some guidance
-cd veriumMiner ./build.sh
+cd veriumMiner 
+./build.sh
 echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$(hostname) -p $PASSWORD $@" > run.sh
 chmod +x run.sh
 
