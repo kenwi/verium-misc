@@ -17,7 +17,7 @@ echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$(h
 chmod +x run.sh
 
 echo ""
-echo "Additional parameters will be passed through to the cpuminer executable."
+echo "Start the miner with ./run.sh, additional parameters will be passed through to the cpuminer executable."
 echo "Example"
 echo "* To limit to the number of N threads: ./run.sh -t 1"
 echo ""
