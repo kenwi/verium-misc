@@ -16,6 +16,7 @@ cd veriumMiner
 echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$(hostname) -p $PASSWORD $@" > run.sh
 chmod +x run.sh
 
+cd veriumMiner
 echo ""
 echo "Start the miner with ./run.sh, additional parameters will be passed through to the cpuminer executable."
 echo "Example"
