@@ -11,6 +11,6 @@ echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u myusernam
 chmod +x run.sh
 
 echo ""
-echo "Edit and execute run.sh to start the miner. Additional parameters will be passed through to the cpuminer executable."
+echo "Edit and execute run.sh to start the miner. Additional parameters will be passed through to the cpuminer executable. Default worker username is system hostname."
 echo "Example: To limit to the number of N threads: ./run.sh -t 1"
 echo ""
