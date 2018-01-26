@@ -23,6 +23,8 @@ chmod +x run.sh
 
 echo ""
 echo "Start the miner with ./run.sh, additional parameters will be passed through to the cpuminer executable."
-echo "Example"
-echo "* To limit to the number of N threads: ./run.sh -t 1"
+echo "Usage: \t./run [-options]"
+echo "\t[-t limit to the number of N threads]"
 echo ""
+echo "Examples:"
+echo "\t./run -t 1"
