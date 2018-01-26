@@ -22,9 +22,9 @@ echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$WO
 chmod +x run.sh
 
 echo ""
-echo "Start the miner with ./run.sh, additional parameters will be passed through to the cpuminer executable."
+echo "Start the miner with ./run.sh, additional parameters will be passed through to the cpuminer executable. By default the miner will spawn threads equal to the number of cores*2."
 echo "Usage: \t./run [-options]"
 echo "\t[-t limit to the number of N threads]"
 echo ""
 echo "Examples:"
-echo "\t./run -t 1"
+echo "\t./run -t 1\t Avoids burning down your house."
