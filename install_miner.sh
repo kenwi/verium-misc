@@ -1,6 +1,7 @@
 #!/bin/bash
 read -p "Enter pool username: " USER
-read -p "Worker name is $(hostname). Enter worker password: " PASSWORD
+read -p "Enter worker username: " WORKERUSER
+read -p "Enter worker password: " PASSWORD
 
 # Update apt and install git
 sudo apt update -y
@@ -17,7 +18,7 @@ cd ..
 
 echo "#!/bin/bash" >> run.sh
 echo "cd veriumMiner" >> run.sh
-echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$(hostname) -p $PASSWORD \$@" >> run.sh
+echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$WORKERUSER -p $PASSWORD \$@" >> run.sh
 chmod +x run.sh
 
 echo ""
