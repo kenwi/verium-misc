@@ -8,7 +8,7 @@ sudo apt update -y
 sudo apt install git -y
 
 # Clone miner and install deps
-git clone https://github.com/fireworm71/veriumMiner
+git clone https://github.com/effectsToCause/veriumMiner
 sudo apt install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev -y
 
 # Build and output some guidance
