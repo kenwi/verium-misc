@@ -11,6 +11,9 @@ sudo apt install git -y
 git clone https://github.com/fireworm71/veriumMiner
 sudo apt install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev -y
 
+# Enable HugePages
+echo always | sudo tee /sys/kernel/mm/transparent_hugepage/enabled
+ 
 # Build and output some guidance
 cd veriumMiner
 ./build.sh
@@ -21,9 +24,6 @@ echo "cd veriumMiner" >> run.sh
 echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$WORKERUSER -p $PASSWORD \$@" >> run.sh
 chmod +x run.sh
 
-# Enable HugePages
-echo always | sudo tee /sys/kernel/mm/transparent_hugepage/enabled
- 
 echo ""
 echo "Start the miner with ./run.sh, additional parameters will be passed through to the cpuminer executable. By default the miner will spawn N number of threads where N = (number of cpu cores) * 2."
 echo "Usage: \t./run [-options]"
