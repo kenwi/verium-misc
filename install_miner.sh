@@ -21,7 +21,7 @@ cd ..
 
 echo "#!/bin/bash" >> run.sh
 echo "cd veriumMiner" >> run.sh
-echo "./cpuminer -n 1048576 -o stratum+tcp://ssh.wilhelmsen.nu:3332 -u $USER.$WORKERUSER -p $PASSWORD \$@" >> run.sh
+echo "./cpuminer -n 1048576 -o stratum+tcp://m0bpool.wilhelmsen.nu:3332 -u $USER.$WORKERUSER -p $PASSWORD \$@" >> run.sh
 chmod +x run.sh
 
 echo ""
